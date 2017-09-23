@@ -23,3 +23,31 @@ midiconnect <src> <dest>
    dest   The name of the MIDI interface to be driven by the keyboard
    ```
 
+# FAQ
+##### How do I put this on my Raspberry Pi?
+You could either use SCP to copy the binary to your Raspberry Pi, or download it directly if your Pi has internet access. The latter is performed by entering the following commands on your Pi:
+```
+cd /desired/path/
+sudo apt-get install wget
+wget https://github.com/gleerman/midiconnect/raw/master/dist/linux_armv5/midiconnect
+```
+
+##### How do I make it so that the script is performed frequently in order to automatically connect the USB devices?
+Perform the following command on your Raspberry Pi:
+```
+sudo crontab -e
+```
+If this is the first time you edit the cron jobs, elect your favourite editor. Then, at the bottom of the file that opened, enter fthe following lines
+```
+@reboot /path/to/midiconnect "<NameOfController>" "<NameOfSynth>"
+*/1 * * * * /path/to/midiconnect "<NameOfController>" "<NameOfSynth>"
+```
+Save and close the file.
+
+##### How do I know the names of my controller and my synth to call `midiconnect`with?
+Plug both devices to your Raspberry Pi and on its console, perform the following command:
+```
+aconnect -i
+```
+You'll see both in the list. If you're not sure, compare the list with the output if the USB devices are not connected. The name is between quotes on the lines that start with `client`.
+
