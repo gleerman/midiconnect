@@ -1,8 +1,8 @@
-# Connect MIDI keyboard to synthesizer using a Raspberry Pi
+# Connect USB MIDI keyboard to synthesizer using a Raspberry Pi
 
 
 ## Context
-I recently bought an [OP-1](https://www.teenageengineering.com/products/op-1) and already had an [Arturia Minilab](https://www.arturia.com/products/hybrid-synths/minilab/overview) MIDI controller, so I wanted to connect them. That turned out not to be easy without buying an expensive interface. Then I found [this vid on YouTube](https://www.youtube.com/watch?v=crwJ56aYkw4), describing how to use a Raspberry PI as a bridge using the `aconnect` util. The only thing missing, was that I don't want to take out my PC or screen + keyboard during a rehearsal session. Ideally, plugging in the PI and connecting my keyboard and my OP-1 would instantly connect them.
+I recently bought an [OP-1](https://www.teenageengineering.com/products/op-1) and already had an [Arturia Minilab](https://www.arturia.com/products/hybrid-synths/minilab/overview) USB MIDI controller, so I wanted to connect them. That turned out not to be easy without buying an expensive interface. Then I found [this vid on YouTube](https://www.youtube.com/watch?v=crwJ56aYkw4), describing how to use a Raspberry PI as a bridge using the `aconnect` util. The only thing missing, was that I don't want to take out my PC or screen + keyboard during a rehearsal session. Ideally, plugging in the PI and connecting my keyboard and my OP-1 would instantly connect them.
 
 This script can be added as a cron job and does exactly that. This is what my PI says now:
 ```
