@@ -7,6 +7,6 @@ import (
 func sanitizeString(input string) (output string) {
 	output = strings.TrimSpace(input)
 	output = strings.ToLower(output)
-	output = strings.Trim(input, "\"")
+	output = strings.Trim(output, "\"")
 	return output
 }
