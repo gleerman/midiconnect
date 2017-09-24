@@ -37,7 +37,7 @@ Perform the following command on your Raspberry Pi:
 ```
 sudo crontab -e
 ```
-If this is the first time you edit the cron jobs, elect your favourite editor. Then, at the bottom of the file that opened, enter fthe following lines
+If this is the first time you edit the cron jobs, select your favourite editor. Then, at the bottom of the file that opened, enter fthe following lines
 ```
 @reboot /path/to/midiconnect "<NameOfController>" "<NameOfSynth>"
 */1 * * * * /path/to/midiconnect "<NameOfController>" "<NameOfSynth>"
@@ -45,7 +45,7 @@ If this is the first time you edit the cron jobs, elect your favourite editor. T
 Save and close the file.
 
 ##### How do I know the names of my controller and my synth to call `midiconnect`with?
-Plug both devices to your Raspberry Pi and on its console, perform the following command:
+Plug both devices to your Raspberry Pi and perform the following command:
 ```
 aconnect -i
 ```
