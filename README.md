@@ -37,7 +37,8 @@ Perform the following command on your Raspberry Pi:
 ```
 sudo crontab -e
 ```
-If this is the first time you edit the cron jobs, select your favourite editor. Then, at the bottom of the file that opened, enter fthe following lines
+Crontab is an automated job that performs specific actions on a set schedule.
+If this is the first time you edit the cron jobs, select your favourite editor. Then, at the bottom of the file that opened, enter the following lines
 ```
 @reboot /path/to/midiconnect "<NameOfController>" "<NameOfSynth>"
 */1 * * * * /path/to/midiconnect "<NameOfController>" "<NameOfSynth>"
@@ -50,4 +51,3 @@ Plug both devices to your Raspberry Pi and perform the following command:
 aconnect -i
 ```
 You'll see both in the list. If you're not sure, compare the list with the output if the USB devices are not connected. The name is between quotes on the lines that start with `client`.
-
